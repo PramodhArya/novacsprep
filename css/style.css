@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Adjust cards for shrunken screen */
+@media (max-width: 1437px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+}
+@media (min-width: 1437px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 918px) {
+  .management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+  .director-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+}
+@media (min-width: 918px) {
+  .management-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .director-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Global */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  line-height: 2;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.container p {
+  padding: 30px 100px;
+}
+
+.scaled-container {
+  padding: 30px 25%;
+  text-align: center;
+}
+
+.scaled-container p {
+  padding: 30px 50px;
+  line-height: 2;
+}
+
+.mid-container {
+  padding: 30px 15%;
+  text-align: center;
+}
+
+.wide-shadowed-box {
+  background: #f1f1f1;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 92%;
+  margin-left: 4%;
+  display: relative;
+}
+
+.shadowed-box a {
+  padding: 50px;
+}
+
+.shadowed-box {
+  background: #f1f1f1;
+  display: block;
+  text-align: left;
+  align-self: left;
+}
+
+.column-container {
+  padding: 0px 25%;
+}
+
+.column-container a {
+  padding: 30px;
+}
+
+/* Grids */
+.director-grid > div:nth-of-type(1) img {
+  position: relative;
+  transform: scale(1.5);
+  z-index: -1;
+  margin-top: 65px;
+  margin-bottom: 135px;
+}
+
+.director-grid > div img {
+  width: 50%;
+}
+
+.director-grid > div h3 {
+  font-weight: 100;
+}
+
+.management-grid > div h3 {
+  font-weight: 100;
+}
+
+.card-grid > img {
+  width: 100%;
+}
+
+.card-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "bg1 bg2 bg3"
+    "bg1 bg4 bg5"
+    "bg6 bg7 bg8";
+}
+
+.grid-container > div {
+  width: auto;
+  height: 12.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images */
+.founders {
+  background: url(../images/founders.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position-x: 57%;
+}
+
+.circle {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circle img {
+  position: relative;
+  z-index: -1;
+  width: auto;
+  height: 100%;
+  transform: scale(1.5);
+}
+
+.full-image {
+  background: url(../images/kc.jpg);
+  width: 100%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
+.team-image {
+  background: url(../images/1.jpg);
+  text-align: left;
+  width: 50%;
+  display: inline-block;
+  height: 580px;
+}
+
+.almost-full-image {
+  background: url(../images/group.jpg);
+  width: 92%;
+  margin-left: 4%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.bg1 {
+  grid-area: bg1;
+  min-height: 26rem;
+  background: url("../images/1.jpg");
+  background-size: cover;
+}
+
+.bg2 {
+  grid-area: bg2;
+  background: url("../images/2.webp");
+  background-size: cover;
+}
+.bg3 {
+  grid-area: bg3;
+  background: url("../images/3.webp");
+  background-size: cover;
+}
+.bg4 {
+  grid-area: bg4;
+  background: url("../images/4.webp");
+  background-size: cover;
+}
+.bg5 {
+  grid-area: bg5;
+  background: url("../images/5.webp");
+  background-size: cover;
+}
+.bg6 {
+  grid-area: bg6;
+  background: url("../images/6.webp");
+  background-size: cover;
+}
+.bg7 {
+  grid-area: bg7;
+  background: url("../images/7.webp");
+  background-size: cover;
+}
+.bg8 {
+  grid-area: bg8;
+  background: url("../images/8.webp");
+  background-size: cover;
+}
+
+/* Header */
+.header-container {
+  background: white;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-header {
+  border-bottom: 1px black solid;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+#main-header h1 {
+  font-weight: 500;
+  font-size: 30px;
+  padding: 0;
+  margin: 30px 0px 10px 0px;
+}
+
+#main-header h4 {
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 10px;
+}
+
+#navbar #email {
+  float: right;
+}
+
+#navbar ul {
+  padding: 0;
+  list-style: none;
+}
+
+#navbar ul li ul li {
+  float: none;
+}
+
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover ul {
+  display: block;
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+/* Body */
+.spacer {
+  padding-top: 200px;
+}
+
+#main-footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
